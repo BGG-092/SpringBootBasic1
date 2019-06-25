@@ -3,9 +3,9 @@ package board.board.mapper;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
-import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import board.board.dto.BoardDto;
+import board.board.dto.BoardFileDto;
 
 @Mapper
 public interface BoardMapper {
@@ -20,6 +20,8 @@ public interface BoardMapper {
 	void updateBoard(BoardDto board) throws Exception;
 	
 	void deleteBoard(int boardIdx) throws Exception;
+	
+	void insertBoardFileList(List<BoardFileDto> list) throws Exception;
 }
 
 
