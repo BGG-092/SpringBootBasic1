@@ -44,7 +44,7 @@ public class BoardController {
 	@RequestMapping("/board/openBoardDetail.do")
 	public ModelAndView openBoardDetail(@RequestParam int boardIdx) throws Exception{
 		ModelAndView mv = new ModelAndView("/board/boardDetail");
-
+		
 		BoardDto board = boardService.selectBoardDetail(boardIdx);
 		mv.addObject("board", board);
 		
