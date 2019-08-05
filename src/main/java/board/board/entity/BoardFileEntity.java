@@ -25,7 +25,7 @@ public class BoardFileEntity {
 	private String originalFileName;
 	
 	@Column(nullable = false)
-	private String stroedFilePath;
+	private String storedFilePath;
 	
 	@Column(nullable = false)
 	private long fileSize;

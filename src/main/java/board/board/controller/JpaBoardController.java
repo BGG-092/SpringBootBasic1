@@ -73,7 +73,7 @@ public class JpaBoardController {
 	public void downloadBoardFile(int boardIdx, int idx, HttpServletResponse response) throws Exception{
 		BoardFileEntity file = jpaBoardService.selectBoardFileInformation(boardIdx, idx); 
 		
-		byte[] files = FileUtils.readFileToByteArray(new File(file.getStroedFilePath()));
+		byte[] files = FileUtils.readFileToByteArray(new File(file.getStoredFilePath()));
 		
 		response.setContentType("application/octet-stream");
 		response.setContentLength(files.length);
