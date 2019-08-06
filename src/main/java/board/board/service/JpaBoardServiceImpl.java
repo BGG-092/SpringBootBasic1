@@ -62,7 +62,7 @@ public class JpaBoardServiceImpl implements JpaBoardService{
 	}
 
 	@Override
-	public BoardFileEntity selectBoardFileInformation(int idx, int boardIdx) throws Exception {
+	public BoardFileEntity selectBoardFileInformation(int boardIdx, int idx) throws Exception {
 		BoardFileEntity boardFile = jpaBoardRepository.findBoardFile(boardIdx, idx);
 		return boardFile;
 	}
